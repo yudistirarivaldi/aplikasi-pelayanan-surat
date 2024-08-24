@@ -26,8 +26,8 @@
 									<input type="text" name="tanggal" class="form-control" value="<?php echo date('Y-m-d'); ?>" readonly>
 								</div>
 								<div class="form-group">
-									<label>Jam Masuk</label>
-									<input type="text" name="absen_msk" class="form-control" value="<?php echo date('H:i'); ?>" readonly>
+									<label>Jam Pulang</label>
+									<input type="text" name="absen_plg" class="form-control" value="<?php echo date('H:i'); ?>" readonly>
 								</div>
 							</div>
 						</div>
@@ -44,12 +44,9 @@
 
 <?php
 if (isset($_POST['simpan'])) {
-	$nik = $_POST['nik'];
-	$nama = $_POST['nama'];
-	$absen_msk = $_POST['absen_msk'];
-	$tanggal = $_POST['tanggal'];
-
-	$sql = "INSERT INTO absensi (nik,nama,absen_msk,tanggal) VALUES ('$nik','$nama','$absen_msk','$tanggal')";
+	$absen_plg = $_POST['absen_plg'];
+	$id_absen = $_GET['id'];
+	$sql = "UPDATE absensi SET absen_plg = '$absen_plg' WHERE id = '$id_absen'";
 	$query = mysqli_query($konek, $sql);
 
 	if ($query) {
@@ -57,7 +54,7 @@ if (isset($_POST['simpan'])) {
 		echo '<meta http-equiv="refresh" content="3; url=?halaman=tampil_absensi">';
 	} else {
 		echo "<script language='javascript'>swal('Gagal...', 'Simpan Gagal', 'error');</script>";
-		echo '<meta http-equiv="refresh" content="3; url=?halaman=tambah_absensi">';
+		echo '<meta http-equiv="refresh" content="3; url=?halaman=tambah_absensi_pulang">';
 	}
 }
 ?>

@@ -327,6 +327,9 @@
 			  case 'tambah_absensi';
                 include 'tambah_absensi.php';
 			  break;
+			  case 'tambah_absensi_pulang';
+                include 'tambah_absensi_pulang.php';
+			  break;
 			  case 'ubah_user';
                 include 'ubah_user.php';
 			  break;
