@@ -25,7 +25,7 @@
         $keperluan = $data['keperluan'];
         $request = $data['request'];
         $acc = $data['acc'];
-        $format4 = date('d F Y', strtotime($acc));
+        $format4 = !empty($acc) ? date('d F Y', strtotime($acc)) : null;
         if($acc==0){
             $acc="BELUM TTD";
         }elseif($acc==1){
@@ -83,7 +83,7 @@
                                 <table border="1" align="center">
                                     <table border="0" align="center">
                                         <tr>
-                                        <td><img src="img/logotanahlaut.png" width="70" height="87" alt=""></td>
+                                        <td><img src="/main/img/logo-kertak-hanyar.png" width="70" height="87" alt=""></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>

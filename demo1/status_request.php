@@ -24,6 +24,7 @@
 													<th>Keperluan</th>
 													<th>Status</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -63,6 +64,7 @@
 													<td><?php echo $keperluan;?></td>
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><i><?php echo $keterangan;?></i></td>
+													<td><i><a href="cetak_sktm.php?id_request_sktm=<?=$id_request_sktm;?>" class="" target="_blank">File Surat</a></i></td>
 													<td>
 														<div class="form-button-action">
 															<a href="?halaman=tampil_status&id_request_sktm=<?=$id_request_sktm;?>">
@@ -104,6 +106,7 @@
 													<th>Keperluan</th>
 													<th>Status</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -144,6 +147,7 @@
 													<td><?php echo $keperluan;?></td>
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><i><?php echo $keterangan;?></i></td>
+													<td><i><a href="cetak_sku.php?id_request_sku=<?=$id_request_sku;?>" class="" target="_blank">File Surat</a></i></td>
 													<td>
 															<a href="?halaman=tampil_status&id_request_sku=<?= $id_request_sku;?>">
 																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
@@ -184,6 +188,7 @@
 													<th>Keperluan</th>
 													<th>Status</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -223,6 +228,7 @@
 													<td><?php echo $keperluan;?></td>
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><i><?php echo $keterangan;?></i></td>
+													<td><i><a href="cetak_skp.php?id_request_skp=<?=$id_request_skp;?>" class="" target="_blank">File Surat</a></i></td>
 													<td>
 														<div class="form-button-action">
 															<a href="?halaman=tampil_status&id_request_skp=<?= $id_request_skp;?>">
@@ -264,6 +270,7 @@
 													<th>Keperluan</th>
 													<th>Status</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -305,6 +312,7 @@
 													<td><?php echo $keperluan;?></td>
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><i><?php echo $keterangan;?></i></td>
+													<td><i><a href="cetak_skbm.php?id_request_skbm=<?=$id_request_skbm;?>" class="" target="_blank">File Surat</a></i></td>
 													<td>
 														<div class="form-button-action">
 															<a href="?halaman=tampil_status&id_request_skbm=<?= $id_request_skbm;?>">
@@ -347,6 +355,7 @@
 													<th>Keperluan</th>
 													<th>Status</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -392,6 +401,7 @@
 													<td><?php echo $keperluan;?></td>
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><i><?php echo $keterangan;?></i></td>
+													<td><i><a href="cetak_skm.php?id_request_skm=<?=$id_request_skm;?>" class="" target="_blank">File Surat</a></i></td>
 													<td>
 														<div class="form-button-action">
 															<a href="?halaman=tampil_status&id_request_skm=<?= $id_request_skm;?>">
@@ -434,6 +444,7 @@
 													<th>Keperluan</th>
 													<th>Status</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -479,6 +490,7 @@
 													<td><?php echo $keperluan;?></td>
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><i><?php echo $keterangan;?></i></td>
+													<td><i><a href="cetak_skc.php?id_request_skc=<?=$id_request_skc;?>" class="" target="_blank">File Surat</a></i></td>
 													<td>
 														<div class="form-button-action">
 															<a href="?halaman=tampil_status&id_request_skc=<?= $id_request_skc;?>">
@@ -520,6 +532,7 @@
 													<th>Keperluan</th>
 													<th>Status</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -561,6 +574,7 @@
 													<td><?php echo $keperluan;?></td>
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><i><?php echo $keterangan;?></i></td>
+													<td><i><a href="cetak_skk.php?id_request_skk=<?=$id_request_skk;?>" class="" target="_blank">File Surat</a></i></td>
 													<td>
 														<div class="form-button-action">
 															<a href="?halaman=tampil_status&id_request_skk=<?= $id_request_skk;?>">
@@ -601,6 +615,7 @@
 													<th>Status</th>
 													<th>Keperluan</th>
 													<th>Keterangan</th>
+													<th>Cetak Surat</th>
 													<th style="width: 10%">Action</th>
 												</tr>
 											</thead>
@@ -639,6 +654,8 @@
 													<td class="fw-bold text-uppercase text-danger op-8"><?php echo $status;?></td>
 													<td><?= $keperluan;?></td>
 													<td><i><?= $keterangan;?></i></td>
+													<td><i><a href="cetak_skd.php?id_request_skd=<?=$id_request_skd;?>" class="" target="_blank">File Surat</a></i></td>
+													
 													<td>
 														<div class="form-button-action">
 														

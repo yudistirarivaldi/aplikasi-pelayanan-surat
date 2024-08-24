@@ -1,7 +1,7 @@
 <footer class="footer">
 				<div class="container-fluid">
 					<div class="copyright ml-auto">
-						<?php echo date('Y');?>, Credit <i class="fa fa-heart heart text-danger"></i> by ahmadramadani
+						<?php echo date('Y');?>, Credit <i class="fa fa-heart heart text-danger"></i> by Desa 
 					</div>				
 				</div>
 			</footer>

@@ -61,17 +61,8 @@
                                                     <option value="">Pilih</option>
                                                     <option value="Surat dicetak, bisa diambil!">Surat dicetak, bisa diambil!</option>
                                                 </select><br>
-                                                <!-- <input type="date" name="tgl_acc" class="form-control"> -->
                                                     <input type="submit" name="ttd" value="Kirim" class="btn btn-primary btn-sm">
                                                     <a href="cetak_skd.php?id_request_skd=<?=$id;?>" class="btn btn-primary btn-sm">Cetak</a>
-                                                <!-- <div class="form-group">
-                                                    <a href="cetak_skd.php?id_request_skd=<?php $id;?>">
-                                                        Cetak
-                                                    </a>
-                                                </div> -->
-                                                <!-- <div class="form-group">
-                                                   <a href="cetak_skd.php?id_request_skd=<?=$id;?>">a</a>
-                                                </div> -->
                                             </div>
                                         </form>
                                         <?php
@@ -100,7 +91,7 @@
                                 <table border="1" align="center">
                                     <table border="0" align="center">
                                         <tr>
-                                        <td><img src="img/logotanahlaut.png" width="70" height="87" alt=""></td>
+                                        <td><img src="/main/img/logo-kertak-hanyar.png" width="70" height="87" alt=""></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>

@@ -41,12 +41,12 @@
 								<p>Status Request</p>
 							</a>
 						</li>
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a href="?halaman=tampil_dana_pemohon">
 								<i class="fa fa-money-bill"></i>
 								<p>Tampilan Dana</p>
 							</a>
-						</li>
+						</li> -->
 						<?php
 							}
 						?>
@@ -164,6 +164,9 @@
 			  case 'detail_skbm';
                 include 'detail_skbm.php';
 			  break;
+			  case 'detail_absensi';
+                include 'detail_absensi.php';
+			  break;
 			  case 'detail_sku';
                 include 'detail_sku.php';
 			  break;
@@ -188,6 +191,12 @@
 			  case 'tampil_penduduk';
                 include 'tampil_penduduk.php';
 			  break;
+			  case 'tampil_absensi';
+                include 'tampil_absensi.php';
+			  break;
+			  case 'group_absensi';
+                include 'group_absensi.php';
+			  break;
 			  case 'tampil_dana';
                 include 'tampil_dana.php';
 			  break;
@@ -199,6 +208,9 @@
 			  break;
 			  case 'tambah_penduduk';
                 include 'tambah_penduduk.php';
+			  break;
+			  case 'tambah_absensi';
+                include 'tambah_absensi.php';
 			  break;
 			  case 'ubah_user';
                 include 'ubah_user.php';

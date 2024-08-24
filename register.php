@@ -34,7 +34,7 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="main/img/logotanahlaut.png" width="54" height="54" alt="logo">
+                <img src="main/img/logo-kertak-hanyar.png" alt="logo">
               </div>
               <h4>HALAMAN PENDAFTARAN</h4>
               <form method="POST" class="pt-3">

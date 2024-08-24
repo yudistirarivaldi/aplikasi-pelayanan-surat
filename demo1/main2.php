@@ -39,6 +39,18 @@
 								<p>Data Penduduk</p>
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="?halaman=tampil_absensi">
+								<i class="fa fa-user-check"></i>
+								<p>Absensi Staff</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="?halaman=group_absensi">
+								<i class="fa fa-user-clock"></i>
+								<p>Laporan Absensi</p>
+							</a>
+						</li>
 						<!-- <li class="nav-item">
 							<a href="?halaman=tampil_dana">
 								<i class="fa fa-money-bill"></i>
@@ -270,6 +282,9 @@
 			  case 'detail_skbm';
                 include 'detail_skbm.php';
 			  break;
+			  case 'detail_absensi';
+                include 'detail_absensi.php';
+			  break;
 			  case 'detail_sktm';
                 include 'detail_sktm.php';
 			  break;
@@ -297,11 +312,20 @@
 			  case 'tampil_penduduk';
                 include 'tampil_penduduk.php';
 			  break;
+			  case 'tampil_absensi';
+                include 'tampil_absensi.php';
+			  break;
+			  case 'group_absensi';
+                include 'group_absensi.php';
+			  break;
 			  case 'tambah_user';
                 include 'tambah_user.php';
 			  break;
 			  case 'tambah_penduduk';
                 include 'tambah_penduduk.php';
+			  break;
+			  case 'tambah_absensi';
+                include 'tambah_absensi.php';
 			  break;
 			  case 'ubah_user';
                 include 'ubah_user.php';
