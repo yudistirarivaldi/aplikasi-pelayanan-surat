@@ -95,7 +95,7 @@
         <td></td>
             <td>
                 <center>
-                    <font size="4"><b>LAPORAN REQUEST SURAT KETERANGAN KELAHIRAN</b></font><br>
+                    <font size="4"><b>LAPORAN REQUEST SURAT KETERANGAN MENIKAH</b></font><br>
                     <font size="4"><b> DESA DURIAN BUNGKUK</b></font><br>
                     <font size="4"><b>BULAN <?php echo $bln;?></b></font><br>
                 </center>

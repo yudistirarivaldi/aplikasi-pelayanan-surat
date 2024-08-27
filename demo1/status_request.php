@@ -422,7 +422,7 @@
 							</div>
                         </div>
 
-							<div class="col-md-12">
+						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
@@ -431,7 +431,7 @@
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
-										<table id="add7" class="display table table-striped table-hover" >
+										<table id="add8" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
                                                     <th>Tanggal Request</th>

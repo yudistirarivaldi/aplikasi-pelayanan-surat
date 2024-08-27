@@ -20,47 +20,14 @@
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="../assets/css/demo.css">
 <?php
-	if(isset($_GET['bulan'])){
-        $bln=$_GET['bulan'];
 		$sql = "SELECT
-		data_user.nik,
-		data_user.nama,
-		data_request_skbm.acc,
-        data_request_skbm.tanggal_request,
-		data_request_skbm.keperluan,
-		data_request_skbm.request
+		data_penduduk.nik,
+		data_penduduk.nama,
+		data_penduduk.tanggal_lahir,
+		data_penduduk.tempat_lahir,
+		data_penduduk.jekel
 	FROM
-		data_user
-	INNER JOIN data_request_skbm ON data_request_skbm.nik = data_user.nik
-    WHERE month(data_request_skbm.acc) = '$bln'
-    ";
-    
-    if($bln=="1"){
-        $bln="JANUARI";
-    }elseif($bln=="2"){
-        $bln="FEBRUARI";
-    }elseif($bln=="3"){
-        $bln="MARET";
-    }elseif($bln=="4"){
-        $bln="APRIL";
-    }elseif($bln=="5"){
-        $bln="MEI";
-    }elseif($bln=="6"){
-        $bln="JUNI";
-    }elseif($bln=="7"){
-        $bln="JULI";
-    }elseif($bln=="8"){
-        $bln="AGUSTUS";
-    }elseif($bln=="9"){
-        $bln="SEPTEMBER";
-    }elseif($bln=="10"){
-        $bln="OKTOBER";
-    }elseif($bln=="11"){
-        $bln="NOVEMBER";
-    }elseif($bln=="12"){
-        $bln="DESEMBER";
-    }
- 
+		data_penduduk";
     
 ?>
 <!DOCTYPE html>
@@ -95,9 +62,8 @@
         <td></td>
             <td>
                 <center>
-                    <font size="4"><b>LAPORAN REQUEST SURAT KETERANGAN BELUM MENIKAH</b></font><br>
+                    <font size="4"><b>LAPORAN DATA PENDUDUK</b></font><br>
                     <font size="4"><b> DESA DURIAN BUNGKUK</b></font><br>
-                    <font size="4"><b>BULAN <?php echo $bln;?></b></font><br>
                 </center>
             </td>
         <td></td>
@@ -129,40 +95,37 @@
     <center>
 <table class="table table-bordered">
         <tr>
-            <th>No.</th>
-            <th>Tanggal Request</th>
-            <th>Tanggal ACC</th>
-            <th>Nama</th>
-            <th>Keperluan</th>
-            <th>Request</th>
+            <th scope="col">No</th>
+            <th scope="col">Nik</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Tanggal Lahir</th>
+            <th scope="col">Tempat Lahir</th>
+            <th scope="col">Jenis Kelamin</th>
         </tr>
         <?php
             $no=0;
             $query=mysqli_query($konek,$sql);
             while($data=mysqli_fetch_array($query,MYSQLI_BOTH)){
                 $no++;
-                // $nik = $data['nik'];
+                $nik = $data['nik'];	
                 $nama = $data['nama'];
-                $tanggal = $data['acc'];
-                $format1 = date('d F Y',strtotime($tanggal));
-                $keperluan = $data['keperluan'];
-                $request = $data['request'];
-                $tglreq = $data['tanggal_request'];
-                $req = date('d F Y',strtotime($tglreq));
+                $tanggal = $data['tanggal_lahir'];
+                $tgl = date('d F Y', strtotime($tanggal));
+                $tmp_lahir = $data['tempat_lahir'];
+                $jekel = $data['jekel'];
         ?>
         <tbody>
             <tr>
-                <th><?php echo $no;?></th>
-                <td><?php echo $req;?></td>
-                <td><?php echo $format1;?></td>
-                <!-- <td><?php echo $nik;?></td> -->
+                <td><?php echo $no;?></td>
+                <td><?php echo $tgl;?></td>
+                <td><?php echo $nik;?></td>
                 <td><?php echo $nama;?></td>
-                <td><?php echo $keperluan;?></td>
-                <td><?php echo $request;?></td>
+                <td><?php echo $tmp_lahir;?></td>
+                <td><?php echo $jekel;?></td>
             </tr>
         </tbody>
         <?php
-            }
+            
         }
         ?>
 </table>
@@ -182,7 +145,7 @@
                 <td style="text-align: center"><b>Lurah Desa Durian Bungkuk</b></td>
             </tr>
             <tr>
-                <td style="text-align: center"><b>H.SUNHAJI</b></td>
+                <td style="text-align: center"><b>H . SUNHAJI</b></td>
             </tr>
         </table>
 </body>

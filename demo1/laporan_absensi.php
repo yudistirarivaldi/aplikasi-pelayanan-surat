@@ -7,29 +7,26 @@ date_default_timezone_set('Asia/Jakarta');
 	if(!isset($_POST['tampilkan'])){
 		$bulan = isset($_POST['bulan']) ? $_POST['bulan'] : '';
 		$sql = "SELECT
-		data_user.nik,
-		data_user.nama,
-		data_request_skc.acc,
-		data_request_skc.keperluan,
-		data_request_skc.request
+		absensi.nik,
+		absensi.nama,
+		absensi.tanggal,
+		absensi.absen_msk,
+		absensi.absen_plg
 	FROM
-		data_user
-	INNER JOIN data_request_skc ON data_request_skc.nik = data_user.nik
-	WHERE data_request_skc.status = 3";
+		absensi";
 	$query = mysqli_query($konek,$sql);
 
 	}elseif(isset($_POST['tampilkan'])){
 		$bulan = isset($_POST['bulan']) ? $_POST['bulan'] : '';
 		$sql = "SELECT
-		data_user.nik,
-		data_user.nama,
-		data_request_skc.acc,
-		data_request_skc.keperluan,
-		data_request_skc.request
+		absensi.nik,
+		absensi.nama,
+		absensi.tanggal,
+		absensi.absen_msk,
+		absensi.absen_plg
 	FROM
-		data_user
-	INNER JOIN data_request_skc ON data_request_skc.nik = data_user.nik
-	WHERE month(data_request_skc.acc) = '$bulan'";
+		absensi
+	WHERE month(absensi.tanggal) = '$bulan'";
 	$query = mysqli_query($konek,$sql);
 	}
 
@@ -38,7 +35,7 @@ date_default_timezone_set('Asia/Jakarta');
 					<div class="page-inner py-5">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
-								<h2 class="text-white pb-2 fw-bold">LAPORAN PERBULAN REQUEST SURAT KETERANGAN CERAI</h2>
+								<h2 class="text-white pb-2 fw-bold">LAPORAN PERBULAN ABSENSI STAFF</h2>
 							</div>
 						</div>
 					</div>
@@ -84,7 +81,7 @@ date_default_timezone_set('Asia/Jakarta');
 							<div class="card">
 								<div class="card-header">
 									<div class="card-tools">
-											<a href="cetak_bulan_skc.php?bulan=<?php echo $bulan;?>" target="_blank" class="btn btn-info btn-border btn-round btn-sm">
+											<a href="cetak_bulan_absensi.php?bulan=<?php echo $bulan;?>" target="_blank" class="btn btn-info btn-border btn-round btn-sm">
 												<span class="btn-label">
 													<i class="fa fa-print"></i>
 												</span>
@@ -97,11 +94,11 @@ date_default_timezone_set('Asia/Jakarta');
 										<thead>
 											<tr>
                                                 <th scope="col">No</th>
-                                                <th scope="col">Tanggal ACC</th>
+                                                <th scope="col">Tanggal</th>
                                                 <th scope="col">Nik</th>
 												<th scope="col">Nama</th>
-												<th scope="col">Keperluan</th>
-												<th scope="col">Request</th>
+												<th scope="col">Absen Masuk</th>
+												<th scope="col">Absen Keluar</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -111,18 +108,18 @@ date_default_timezone_set('Asia/Jakarta');
 													$no++;
 													$nik = $data['nik'];	
 													$nama = $data['nama'];
-													$tanggal = $data['acc'];
+													$tanggal = $data['tanggal'];
 													$tgl = date('d F Y', strtotime($tanggal));
-													$keperluan = $data['keperluan'];
-													$request = $data['request'];
+													$abs_masuk = $data['absen_msk'];
+													$abs_plg = $data['absen_plg'];
 											?>
 											<tr>
 												<td><?php echo $no;?></td>
 												<td><?php echo $tgl;?></td>
 												<td><?php echo $nik;?></td>
 												<td><?php echo $nama;?></td>
-												<td><?php echo $keperluan;?></td>
-												<td><?php echo $request;?></td>
+												<td><?php echo $abs_masuk;?></td>
+												<td><?php echo $abs_plg;?></td>
 											</tr>
 											<?php
 												}

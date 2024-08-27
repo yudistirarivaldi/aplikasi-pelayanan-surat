@@ -73,7 +73,7 @@
 <body>
 <table border="0" align="center">
         <tr>
-        <td><img src="//main/img/logo-kertak-hanyar.png" width="70" height="87" alt=""></td>
+        <td><img src="/main/img/logo-kertak-hanyar.png" width="70" height="87" alt=""></td>
         <td></td>
         <td></td>
         <td></td>
@@ -95,7 +95,7 @@
         <td></td>
             <td>
                 <center>
-                    <font size="4"><b>LAPORAN REQUEST SURAT KETERANGAN KELAHIRAN</b></font><br>
+                    <font size="4"><b>LAPORAN REQUEST SURAT KETERANGAN CERAI</b></font><br>
                     <font size="4"><b> DESA DURIAN BUNGKUK</b></font><br>
                     <font size="4"><b>BULAN <?php echo $bln;?></b></font><br>
                 </center>

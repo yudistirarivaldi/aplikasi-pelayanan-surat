@@ -166,6 +166,16 @@
 											<span class="sub-item">SKC</span>
 										</a>
 									</li>
+									<li>
+										<a href="?halaman=laporan_absensi">
+											<span class="sub-item">Absensi</span>
+										</a>
+									</li>
+									<li>
+										<a href="?halaman=laporan_penduduk">
+											<span class="sub-item">Penduduk</span>
+										</a>
+									</li>
 									<!-- <li>
 										<a href="?halaman=laporan_pertahun">
 											<span class="sub-item">Pertahun</span>
@@ -419,6 +429,12 @@
 			  break;
 			  case 'laporan_skm';
                 include 'laporan_skm.php';
+			  break;
+			  case 'laporan_absensi';
+                include 'laporan_absensi.php';
+			  break;
+			  case 'laporan_penduduk';
+                include 'laporan_penduduk.php';
 			  break;
 			  case 'laporan_skc';
                 include 'laporan_skc.php';
